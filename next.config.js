@@ -4,8 +4,8 @@ const nextConfig = {
     webpack: (config, options) => { // webpack configurations
       config.plugins.push(
         new options.webpack.container.ModuleFederationPlugin({
-          name:"fe1",
-          filename: "remoteEntry_2.js", // remote file name which will used later
+          name:"fe2",
+          filename: "static/chunks/remoteEntry_2.js", // remote file name which will used later
           remoteType: "var",
           exposes: { // expose all component here.
             "./footer": "./src/component/Footer"
