@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
- /**webpack5: true, // Need to make it true for some versions of Next JS
- */
- distDir: 'build', // Defined build directory
     webpack: (config, options) => { // webpack configurations
       config.plugins.push(
         new options.webpack.container.ModuleFederationPlugin({
